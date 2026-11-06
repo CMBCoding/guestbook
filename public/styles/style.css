@@ -1,5 +1,32 @@
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+#main {
+    margin: 5rem auto;
+}
+
+#guestbook-form, .form-sect {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+input, label {
+    padding: .25rem;
+    margin: 0.25 0.5rem;
+}
+
+label {
+    font-weight: 600;
+    padding: .25rem 0rem;
+}
+
+.error-msg {
+    padding: 0.5rem 0rem;
+    font-style: italic;
+    font-weight: 600;
+    color: crimson;
+    display: none;
 }

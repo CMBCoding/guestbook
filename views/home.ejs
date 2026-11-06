@@ -13,42 +13,43 @@
                 <div class="form-sect">
                     <label for="fname">First name:</label>
                     <input type="text" id="fname" name="fname" placeholder="John">
-                    <span class="error-msg">Please enter your first name:</span>
+                    <span class="error-msg" id="error-msg-fname">Please enter your first name:</span>
                 </div>
 
                 <!-- Last Name field -->
                 <div class="form-sect">
                     <label for="lname">Last name:</label>
                     <input type="text" id="lname" name="lname" placeholder="Doe">
-                    <span class="error-msg">Please enter your last name</span>
+                    <span class="error-msg" id="error-msg-lname">Please enter your last name</span>
                 </div>
 
                 <!-- Phone Number field -->
                 <div class="form-sect">
                     <label for="number">Phone number:</label>
                     <input type="number" id="number" name="number" placeholder="123-456-7890">
-                    <span class="error-msg">Please enter your phone number</span>
+                    <span class="error-msg" id="error-msg-number">Please enter your phone number</span>
                 </div>
 
                 <!-- Email field -->
                 <div class="form-sect">
                     <label for="email">Email:</label>
-                    <input type="number" id="email" name="email" placeholder="johndoe@email.com">
-                    <span class="error-msg">Please enter your email</span>
+                    <input type="email" id="email" name="email" placeholder="johndoe@email.com">
+                    <span class="error-msg" id="error-msg-email">Please enter your email</span>
                 </div>
             </fieldset>
 
             <fieldset>
                 <legend>Please end the length of your stay</legend>
                 
-                <!-- Check-in Date field -->
-                <label for="checkinDate">Please enter your check-in date:</label>
-                <input type="date" name="checkinDate" id="checkinDate">
-
-                <!-- Check-out Date field -->
-                <label for="checkOutDate">Please enter your check-out date:</label>
-                <input type="date" name="checkOutDate" id="checkOutDate">
-                <span class="error-msg">Please the length of your stay</span>
+                <div class="form-sect">
+                    <!-- Check-in Date field -->
+                    <label for="checkinDate">Please enter your check-in date:</label>
+                    <input type="date" name="checkinDate" id="checkinDate">
+                    <!-- Check-out Date field -->
+                    <label for="checkOutDate">Please enter your check-out date:</label>
+                    <input type="date" name="checkOutDate" id="checkOutDate">
+                    <span class="error-msg" id="error-msg-date">Please the length of your stay</span>
+                </div>
             </fieldset>
             <button type="submit" id="book-btn">Book Now!</button>
         </form>
