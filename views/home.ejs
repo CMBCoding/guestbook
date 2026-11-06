@@ -8,25 +8,37 @@
 <body>
     <main id="main">
         <h1>Guestbook</h1>
-        <form action="#" method="get">
+        <form action="#" method="get" id="guestbook-form">
             <fieldset>
                 <legend>Please enter your information</legend>
 
                 <!-- First Name field -->
-                <label for="fname">Please enter your first name:</label>
-                <input type="text" id="fname" name="fname" placeholder="John">
+                <div class="form-sect">
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="John">
+                    <span class="error-msg">Please enter your first name:</span>
+                </div>
 
                 <!-- Last Name field -->
-                <label for="lname">Please enter your first name:</label>
-                <input type="text" id="lname" name="lname" placeholder="Doe">
+                <div class="form-sect">
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname" placeholder="Doe">
+                    <span class="error-msg">Please enter your last name</span>
+                </div>
 
                 <!-- Phone Number field -->
-                <label for="number">Please enter your phone number:</label>
-                <input type="number" id="number" name="number" placeholder="123-456-7890">
+                <div class="form-sect">
+                    <label for="number">Phone number:</label>
+                    <input type="number" id="number" name="number" placeholder="123-456-7890">
+                    <span class="error-msg">Please enter your phone number</span>
+                </div>
 
                 <!-- Email field -->
-                <label for="email">Please enter your email:</label>
-                <input type="number" id="email" name="email" placeholder="johndoe@email.com">
+                <div class="form-sect">
+                    <label for="email">Email:</label>
+                    <input type="number" id="email" name="email" placeholder="johndoe@email.com">
+                    <span class="error-msg">Please enter your email</span>
+                </div>
             </fieldset>
 
             <fieldset>
@@ -37,8 +49,9 @@
                 <input type="date" name="checkinDate" id="checkinDate">
 
                 <!-- Check-out Date field -->
-                <label for="checkinOut">Please enter your check-out date:</label>
-                <input type="date" name="checkinOut" id="checkinOut">
+                <label for="checkOutDate">Please enter your check-out date:</label>
+                <input type="date" name="checkOutDate" id="checkOutDate">
+                <span class="error-msg">Please the length of your stay</span>
             </fieldset>
             <button type="submit" id="book-btn">Book Now!</button>
         </form>
