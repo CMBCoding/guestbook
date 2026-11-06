@@ -6,6 +6,42 @@
     <title>Guestbook - Home</title>
 </head>
 <body>
-    <h1>Page</h1>
+    <main id="main">
+        <h1>Guestbook</h1>
+        <form action="#" method="get">
+            <fieldset>
+                <legend>Please enter your information</legend>
+
+                <!-- First Name field -->
+                <label for="fname">Please enter your first name:</label>
+                <input type="text" id="fname" name="fname" placeholder="John">
+
+                <!-- Last Name field -->
+                <label for="lname">Please enter your first name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Doe">
+
+                <!-- Phone Number field -->
+                <label for="number">Please enter your phone number:</label>
+                <input type="number" id="number" name="number" placeholder="123-456-7890">
+
+                <!-- Email field -->
+                <label for="email">Please enter your email:</label>
+                <input type="number" id="email" name="email" placeholder="johndoe@email.com">
+            </fieldset>
+
+            <fieldset>
+                <legend>Please end the length of your stay</legend>
+                
+                <!-- Check-in Date field -->
+                <label for="checkinDate">Please enter your check-in date:</label>
+                <input type="date" name="checkinDate" id="checkinDate">
+
+                <!-- Check-out Date field -->
+                <label for="checkinOut">Please enter your check-out date:</label>
+                <input type="date" name="checkinOut" id="checkinOut">
+            </fieldset>
+            <button type="submit" id="book-btn">Book Now!</button>
+        </form>
+    </main>
 </body>
 </html>
