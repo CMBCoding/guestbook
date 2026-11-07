@@ -7,7 +7,16 @@
             <h1>Booking Confirmed!</h1>
             <div>
                 <h2>Booking Details</h2>
+                <ul>
+                    <li>Booking posted: <%= booking.timestamp.toLocaleString() %></li>
+                    <li>Name: <%= booking.fname %> <%= booking.lname %></li>
+                    <li>Phone number: <%= booking.phone %></li>
+                    <li>Email: <%= booking.fname %></li>
+                    <li>Check-in date: <%= booking.checkinDate %></li>
+                    <li>Check-out date: <%= booking.checkOutDate %></li>
+                    <li>Comments: <%= booking.comments %></li>
                 
+                </ul>
             </div>
 
     </main>

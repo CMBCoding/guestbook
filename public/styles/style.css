@@ -15,8 +15,9 @@
 
 input, label {
     padding: .25rem;
-    margin: 0.25 0.5rem;
+    margin: 0.25rem 0.5rem;
 }
+
 
 label {
     font-weight: 600;
@@ -24,9 +25,19 @@ label {
 }
 
 .error-msg {
-    padding: 0.5rem 0rem;
+    padding: 0.5rem;
     font-style: italic;
     font-weight: 600;
     color: crimson;
     display: none;
+}
+
+#comments-section {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    margin: 0.25rem 1.5rem 1rem 1.5rem;
+    resize: none;
 }

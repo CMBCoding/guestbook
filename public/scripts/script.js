@@ -17,6 +17,7 @@ let number = document.getElementById("number").value;
 let email = document.getElementById("email").value;
 let checkinDate = document.getElementById("checkinDate").value;
 let checkOutDate = document.getElementById("checkOutDate").value;
+let comments = document.getElementById("comments").value.trim();
 
 //Validate the fields
 if (fname === '') {
