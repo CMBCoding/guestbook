@@ -4,8 +4,8 @@
 <title>Guestbook - Home</title>
 <body>
     <main id="main">
-        <h1>Guestbook</h1>
-        <form action="#" method="get" id="guestbook-form">
+        <form action="/confirm" method="post" id="guestbook-form">
+            <h1>Guestbook</h1>
             <fieldset>
                 <legend>Please enter your information</legend>
 
@@ -25,7 +25,7 @@
 
                 <!-- Phone Number field -->
                 <div class="form-sect">
-                    <label for="number">Phone number:</label>
+                    <label for="number">Phone number <em>(format: xxx-xxx-xxxx):</em> </label>
                     <input type="tel" id="number" name="number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
                     <span class="error-msg" id="error-msg-number">Please enter your phone number</span>
                 </div>
