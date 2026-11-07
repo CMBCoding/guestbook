@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<%- include('partials/head.ejs') %>
+<title>Guestbook - Confirm</title>
 </head>
 <body>
     <main id="main">
-            <h1>Guestbook</h1>
-
+            <h1>Bookings</h1>
+            <table id="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Check-in Date</th>
+                            <th>Check-out Date</th>
+                            <th>Comments</th>
+                            <th>Date Posted</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <% bookings.forEach(booking => { %>
+                        <tr>
+                            <td><%= booking.fname %> <%= booking.lname %> </td>
+                            <td><%= booking.number %></td>
+                            <td><%= booking.email %></td>
+                            <td><%= booking.checkinDate %></td>
+                            <td><%= booking.checkOutDate %></td>
+                            <td><%= booking.comments %></td>
+                            <td><%= booking.timestamp.toLocaleString() %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
     </main>
+    <script>
+        new DataTable('table', 
+            {responsive: true}
+        )
+    </script>
 </body>
 </html>

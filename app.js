@@ -14,7 +14,59 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
 
 //Array to hold the data from the form
-const bookings  = [];
+const bookings  = [
+{
+    fname: "John",
+    lname: "Doe",
+    number: "555-0101",
+    email: "john.doe@example.com",
+    checkinDate: "2026-11-10",
+    checkOutDate: "2026-11-15",
+    comments: "Excited for our stay! Please arrange a crib if possible.",
+    timestamp: "2026-11-07T08:30:00Z"
+  },
+  {
+    fname: "Jane",
+    lname: "Smith",
+    number: "555-0102",
+    email: "jane.smith@example.com",
+    checkinDate: "2026-11-18",
+    checkOutDate: "2026-11-20",
+    comments: "Arriving late, around 9 PM.",
+    timestamp: "2026-11-07T10:15:22Z"
+  },
+  {
+    fname: "Marcus",
+    lname: "Johnson",
+    number: "555-0103",
+    email: "mjohnson88@example.com",
+    checkinDate: "2026-12-01",
+    checkOutDate: "2026-12-05",
+    comments: "Allergic to down pillows. Feather-free room requested.",
+    timestamp: "2026-11-07T11:42:10Z"
+  },
+  {
+    fname: "Sarah",
+    lname: "Williams",
+    number: "555-0104",
+    email: "swilliams.business@example.com",
+    checkinDate: "2026-12-10",
+    checkOutDate: "2026-12-12",
+    comments: "Need a parking space for a rental car.",
+    timestamp: "2026-11-07T13:05:45Z"
+  },
+  {
+    fname: "David",
+    lname: "Chen",
+    number: "555-0105",
+    email: "dchen_travels@example.com",
+    checkinDate: "2026-12-24",
+    checkOutDate: "2026-12-28",
+    comments: "",
+    timestamp: "2026-11-07T14:50:00Z"
+  }
+
+];
 
 //Add default route, take you to home
 app.get('/', (req, res) => {
@@ -25,8 +77,9 @@ app.get('/confirm', (req, res) => {
     res.render('confirm');
 })
 //Add route for the admit paqge
-app.get('admin', (req, res) => {
-    res.render('admin');
+app.get('/admin', (req, res) => {
+    //Send the booking information to the admin page.
+    res.render('admin', {bookings});
 });
 
 app.post('/confirm', (req, res) => {
