@@ -3,6 +3,10 @@ document.getElementById("guestbook-form").onsubmit = () => {
 //Set flag for validation
 isValid = true;
 
+//Import email for email validation from [https://ihateregex.io]
+const emailRegex = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
+
+
 //Clear out any error messages for valid fields
 clearErrors();
 
@@ -14,7 +18,7 @@ let email = document.getElementById("email").value;
 let checkinDate = document.getElementById("checkinDate").value;
 let checkOutDate = document.getElementById("checkOutDate").value;
 
-
+//Validate the fields
 if (fname === '') {
     isValid = false;
     document.getElementById("error-msg-fname").style.display = "block";
@@ -25,7 +29,7 @@ if (lname === '') {
     document.getElementById("error-msg-lname").style.display = "block";
 }
 
-if (email === '') {
+if (email === '' && (!emailRegex.test(email))) {
     isValid = false;
     document.getElementById("error-msg-email").style.display = "block";
 }
@@ -39,8 +43,6 @@ if ((checkinDate === '') || (checkOutDate === '')) {
     isValid = false;
     document.getElementById("error-msg-date").style.display = "block";
 }
-
-
 
 return isValid;
 
