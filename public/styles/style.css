@@ -12,15 +12,42 @@
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: var(--petal-pink);
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 8rem;
+    margin: 0;
+    background-image: url('../images/hospring.jpg');
+    background-size: cover;
+    border-bottom: solid 10px var(--cherry-red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    height: 8rem;
+    margin: 0;
+    background-color: var(--cherry-red);
+    border-top: solid 10px var(--sakura-pink);
+}
+
+header h1 {
+    color: var(--cherry-red);
+    text-align: center;
 }
 
 #main {
-    margin: 5rem auto;
+    margin: 2.5rem auto;
     width: 100%;
 }
 
 #main h1 {
     text-align: center;
+    color: var(--cherry-red);
 }
 
 #guestbook-form, .form-sect {
@@ -35,6 +62,8 @@ fieldset, #confirm-box, #admin-box {
     border: solid 3px var(--cherry-red);
     border-radius: 1rem;
     background-color: var(--sakura-pink);
+    display: flex;
+    flex-direction: column;
 }
 
 #confirm-box, #admin-box {
@@ -42,15 +71,38 @@ fieldset, #confirm-box, #admin-box {
 }
 
 legend {
+    float: left;
     background-color: var(--cherry-red);
     color: #fff;
     font-weight: bold;
-    /* width: 20rem; */
-    height: 2rem;
+    margin-bottom: .5rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 2.5rem;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#book-btn {
+    background-color: var(--cherry-red);
+    color: #fff;
+    font-weight: bold;
+    width: 40%;
+    margin: 2rem auto;
+    height: 2.5rem;
+    text-align: center;
+    align-self: center;
+    border: none;
+    border-radius: 10px;
+}
+
+#book-btn:hover {
+    background-color: var(--sakura-pink);
+    color: var(--cherry-red);
+    border: solid 3px #fff;
 }
 
 input, label {
@@ -58,17 +110,37 @@ input, label {
     margin: 0.25rem 0.5rem;
 }
 
-
 label {
     font-weight: 600;
     padding: .25rem 0rem;
+}
+
+h2, #table_wrapper label {
+    color: var(--cherry-red);
+}
+
+#table {
+    margin: 1rem auto;
+    border: solid 2px var(--cherry-red);
+    background-color: var(--petal-pink);
+}
+
+#table th {
+    background-color: var(--cherry-red);
+    border: non;
+    color: #fff;
+}
+
+#table tr:hover{
+    background-color: var(--sakura-pink);
+    color: var(--cherry-red);
 }
 
 .error-msg {
     padding: 0.5rem;
     font-style: italic;
     font-weight: 600;
-    color: crimson;
+    color: var(--cherry-red);
     display: none;
 }
 
@@ -84,4 +156,10 @@ textarea {
 
 li {
     list-style-type: none;
+}
+
+@media screen and (min-width: 700px) {
+    main {
+        width: 95%;
+    }
 }

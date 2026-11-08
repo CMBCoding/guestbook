@@ -4,6 +4,7 @@
 <title>Guestbook - Confirm</title>
 </head>
 <body>
+    <%- include('partials/header.ejs') %>
     <main id="main">
             <h1>Bookings</h1>
             <div id="admin-box">
@@ -35,6 +36,7 @@
                 </table>
             </div>
     </main>
+    <%- include('partials/footer.ejs') %>
     <script>
         new DataTable('table', 
             {responsive: true}
