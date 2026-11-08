@@ -3,14 +3,54 @@
     box-sizing: border-box;
 }
 
+:root {
+    --sakura-pink: #FFB3CC;
+    --petal-pink: #FFE6F2;
+    --cherry-red: #B9003D;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--petal-pink);
+}
+
 #main {
     margin: 5rem auto;
+    width: 100%;
+}
+
+#main h1 {
+    text-align: center;
 }
 
 #guestbook-form, .form-sect {
     display: flex;
     flex-direction: column;
     margin: 1rem;
+}
+
+fieldset, #confirm-box, #admin-box {
+    margin: 1rem auto;
+    width: 90%; 
+    border: solid 3px var(--cherry-red);
+    border-radius: 1rem;
+    background-color: var(--sakura-pink);
+}
+
+#confirm-box, #admin-box {
+    padding: 1rem;
+}
+
+legend {
+    background-color: var(--cherry-red);
+    color: #fff;
+    font-weight: bold;
+    /* width: 20rem; */
+    height: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 input, label {
@@ -40,4 +80,8 @@ label {
 textarea {
     margin: 0.25rem 1.5rem 1rem 1.5rem;
     resize: none;
+}
+
+li {
+    list-style-type: none;
 }

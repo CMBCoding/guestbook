@@ -6,32 +6,34 @@
 <body>
     <main id="main">
             <h1>Bookings</h1>
-            <table id="table">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Phone Number</th>
-                            <th>Email</th>
-                            <th>Check-in Date</th>
-                            <th>Check-out Date</th>
-                            <th>Comments</th>
-                            <th>Date Posted</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <% bookings.forEach(booking => { %>
-                        <tr>
-                            <td><%= booking.fname %> <%= booking.lname %> </td>
-                            <td><%= booking.number %></td>
-                            <td><%= booking.email %></td>
-                            <td><%= booking.checkinDate %></td>
-                            <td><%= booking.checkOutDate %></td>
-                            <td><%= booking.comments %></td>
-                            <td><%= booking.timestamp.toLocaleString() %></td>
-                        </tr>
-                    <% }); %>
-                </tbody>
-            </table>
+            <div id="admin-box">
+                <table id="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Phone Number</th>
+                                <th>Email</th>
+                                <th>Check-in Date</th>
+                                <th>Check-out Date</th>
+                                <th>Comments</th>
+                                <th>Date Posted</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <% bookings.forEach(booking => { %>
+                            <tr>
+                                <td><%= booking.fname %> <%= booking.lname %> </td>
+                                <td><%= booking.number %></td>
+                                <td><%= booking.email %></td>
+                                <td><%= booking.checkinDate %></td>
+                                <td><%= booking.checkOutDate %></td>
+                                <td><%= booking.comments %></td>
+                                <td><%= booking.timestamp.toLocaleString() %></td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
     </main>
     <script>
         new DataTable('table', 
