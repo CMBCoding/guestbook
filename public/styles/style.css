@@ -149,6 +149,10 @@ li {
     list-style-type: none;
 }
 
+li strong {
+    color: var(--cherry-red);
+}
+
 /* Table stylings */
 #table {
     margin: 1rem auto;

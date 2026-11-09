@@ -9,13 +9,13 @@
             <div id="confirm-box">
                 <h2>Booking Details</h2>
                 <ul>
-                    <li>Booking posted: <%= booking.timestamp.toLocaleString() %></li>
-                    <li>Name: <%= booking.fname %> <%= booking.lname %></li>
-                    <li>Phone number: <%= booking.phone %></li>
-                    <li>Email: <%= booking.fname %></li>
-                    <li>Check-in date: <%= booking.checkinDate %></li>
-                    <li>Check-out date: <%= booking.checkOutDate %></li>
-                    <li>Comments: <%= booking.comments %></li>
+                    <li><strong>Booking posted:</strong> <%= booking.timestamp.toLocaleString() %></li>
+                    <li><strong>Name:</strong> <%= booking.fname %> <%= booking.lname %></li>
+                    <li><strong>Phone number:</strong> <%= booking.phone %></li>
+                    <li><strong>Email:</strong> <%= booking.fname %></li>
+                    <li><strong>Check-in date:</strong> <%= booking.checkinDate %></li>
+                    <li><strong>Check-out date</strong>: <%= booking.checkOutDate %></li>
+                    <li><strong>Comments:</strong> <%= booking.comments %></li>
                 
                 </ul>
             </div>
