@@ -15,31 +15,38 @@ body {
     margin: 0 auto;
 }
 
+/* Header */
 header {
     width: 100%;
     height: 8rem;
     margin: 0;
-    background-image: url('../images/hospring.jpg');
+    background-image: url('../images/hotspring.jpg');
     background-size: cover;
     border-bottom: solid 10px var(--cherry-red);
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-footer {
-    width: 100%;
-    height: 8rem;
-    margin: 0;
-    background-color: var(--cherry-red);
-    border-top: solid 10px var(--sakura-pink);
+    justify-content: center;
 }
 
 header h1 {
     color: var(--cherry-red);
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(255, 179, 204, 0.527);
+    text-shadow: 0px 2.5px var(--petal-pink);
+    border-radius: 1rem;
 }
 
+
+.icon {
+    height: 1.75rem;
+    margin: .5rem;
+}
+
+/* Main stylings */
 #main {
     margin: 2.5rem auto;
     width: 100%;
@@ -50,6 +57,7 @@ header h1 {
     color: var(--cherry-red);
 }
 
+/* Form and input stylings */
 #guestbook-form, .form-sect {
     display: flex;
     flex-direction: column;
@@ -119,23 +127,6 @@ h2, #table_wrapper label {
     color: var(--cherry-red);
 }
 
-#table {
-    margin: 1rem auto;
-    border: solid 2px var(--cherry-red);
-    background-color: var(--petal-pink);
-}
-
-#table th {
-    background-color: var(--cherry-red);
-    border: non;
-    color: #fff;
-}
-
-#table tr:hover{
-    background-color: var(--sakura-pink);
-    color: var(--cherry-red);
-}
-
 .error-msg {
     padding: 0.5rem;
     font-style: italic;
@@ -157,6 +148,43 @@ textarea {
 li {
     list-style-type: none;
 }
+
+/* Table stylings */
+#table {
+    margin: 1rem auto;
+    border: solid 2px var(--cherry-red);
+    background-color: var(--petal-pink);
+}
+
+#table th {
+    background-color: var(--cherry-red);
+    border: non;
+    color: #fff;
+}
+
+#table tr:hover{
+    background-color: var(--sakura-pink);
+    color: var(--cherry-red);
+}
+
+.dtr-title {
+    font-weight: 600;
+    margin-right: 0.25rem;
+}
+
+td.sorting_1.dtr-control {
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    height: 8rem;
+    margin: 0;
+    background-color: var(--cherry-red);
+    border-top: solid 10px var(--sakura-pink);
+}
+
 
 @media screen and (min-width: 700px) {
     main {
