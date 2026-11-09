@@ -42,7 +42,7 @@ header h1 {
 
 
 .icon {
-    height: 1.75rem;
+    height: 1.5rem;
     margin: .5rem;
 }
 
@@ -183,8 +183,30 @@ footer {
     margin: 0;
     background-color: var(--cherry-red);
     border-top: solid 10px var(--sakura-pink);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+footer > a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > a > .icon {
+    height: 1.25rem;
+}
+
+footer > a:hover {
+    color: var(--sakura-pink);
+    text-decoration: underline;
+}
 
 @media screen and (min-width: 700px) {
     main {
